@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+// use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    echo "Selamat datang";
+});
+
+Route::get('/about', function () {
+    echo "1941720031 , Muhammad Auful Kirom";
+});
+
+Route::get('/articles/{id}', function ($id) {
+    echo "Halaman artikel dengan id ".$id;
 });

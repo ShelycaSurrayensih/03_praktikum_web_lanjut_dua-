@@ -1,11 +1,14 @@
 <?php
 
+<<<<<<< HEAD
 // use App\Http\Controllers\ContacController;
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
+=======
+>>>>>>> a846894effc441ebf5b68663d1cb34bea0c8cf7a
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\WelcomeController;
 /*
@@ -19,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 // Route::get('/hello', function () {
 //     return "Hello World";
 // });
@@ -76,3 +80,16 @@ Route::get('/home', [IndexController::class, 'index'])->name('index.home');
 Route::get('/about', [AboutController::class, 'about'])->name('index.about');
 Route::get('/blog', [BlogController::class, 'blog'])->name('index.blog');
 Route::resource('contact', ContactController::class);
+=======
+Route::get('/', function () {
+    echo "Selamat datang";
+});
+
+Route::get('/about', function () {
+    echo "1941720031 , Muhammad Auful Kirom";
+});
+
+Route::get('/articles/{id}', function ($id) {
+    echo "Halaman artikel dengan id ".$id;
+});
+>>>>>>> a846894effc441ebf5b68663d1cb34bea0c8cf7a

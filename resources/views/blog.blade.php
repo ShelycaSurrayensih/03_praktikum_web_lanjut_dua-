@@ -25,20 +25,21 @@
                 </div>
 
                 <div class="row tm-margin-t-big">
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    @foreach ($blogs as $blog)
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
-                        <div class="tm-content-box">
-                            <img src="img/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #1</h4>
-                            <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="tm-btn text-uppercase">Detail</a>
+                            <div class="tm-content-box">
+                                <img src={{$blog->image}} alt="Image" class="tm-margin-b-30 img-fluid">
+                                <h4 class="tm-margin-b-20 tm-gold-text">{{$blog->title}}</h4>
+                                <p class="tm-margin-b-20">{{$blog->content}}</p>
+                                <a href="#" class="tm-btn text-uppercase">Detail</a>
+                            </div>
+
                         </div>
+                    @endforeach
 
-                    </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    {{-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                         <div class="tm-content-box">
                             <img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
@@ -62,7 +63,7 @@
                             <a href="#" class="tm-btn text-uppercase">Detail</a>
                         </div>
 
-                    </div>
+                    </div> --}}
                 </div>
 
             </div>

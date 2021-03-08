@@ -87,24 +87,24 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-
+                        @foreach ($contacs as $contact)
                         <div class="tm-content-box tm-content-box-contact">
-                            <img src="img/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #1</h4>
-                            <p class="tm-margin-b-20 tm-p-small">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
+                            <img src={{$contact->image}} alt="Image" class="tm-margin-b-20 img-fluid">
+                            <h4 class="tm-margin-b-20 tm-gold-text">{{$contact->title}}</h4>
+                            <p class="tm-margin-b-20 tm-p-small">{{$contact->content}}</p>
                             <a href="#" class="tm-btn text-uppercase">Detail</a>
                         </div>
+                        @endforeach
 
-                        <div class="tm-content-box tm-margin-t-mid tm-content-box-contact">
+
+                        {{-- <div class="tm-content-box tm-margin-t-mid tm-content-box-contact">
                             <img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
                             <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #2</h4>
                             <p class="tm-margin-b-20 tm-p-small">Aenean cursus tellus mauris, quis
                             consequat mauris dapibus id. Donec
                             scelerisque porttitor pharetra</p>
                             <a href="#" class="tm-btn text-uppercase">Read More</a>
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>

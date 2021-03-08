@@ -64,44 +64,17 @@
             </div>
 
             <div class="row tm-margin-t-mid">
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                @foreach ($abouts as $about)
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
 
-                    <div class="tm-content-box">
-                        <img src="img/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                        <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #1</h4>
-                        <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                        consequat mauris dapibus id. Donec
-                        scelerisque porttitor pharetra</p>
-                        <a href="#" class="tm-btn text-uppercase">Detail</a>
+                        <div class="tm-content-box">
+                            <img src={{ $about->image}} alt="Image" class="tm-margin-b-30 img-fluid">
+                            <h4 class="tm-margin-b-20 tm-gold-text">{{ $about->title}}</h4>
+                            <p class="tm-margin-b-20">{{ $about->content}}</p>
+                            <a href="#" class="tm-btn text-uppercase">Detail</a>
+                        </div>
                     </div>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-
-                    <div class="tm-content-box">
-                        <img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                        <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #2</h4>
-                        <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                        consequat mauris dapibus id. Donec
-                        scelerisque porttitor pharetra</p>
-                        <a href="#" class="tm-btn text-uppercase">Read More</a>
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-
-                    <div class="tm-content-box">
-                        <img src="img/tm-img-310x180-3.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                        <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #3</h4>
-                        <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                        consequat mauris dapibus id. Donec
-                        scelerisque porttitor pharetra</p>
-                        <a href="#" class="tm-btn text-uppercase">Detail</a>
-                    </div>
-
-                </div>
+                @endforeach
 
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
 
